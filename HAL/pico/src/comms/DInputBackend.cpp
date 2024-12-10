@@ -42,7 +42,7 @@ void DInputBackend::SendReport() {
     _gamepad->setButton(6, _outputs.buttonL);
     _gamepad->setButton(7, _outputs.triggerLDigital);
     _gamepad->setButton(8, _outputs.select);
-    _gamepad->setButton(9, _outputs.start);
+    _gamepad->setButton(9, _outputs.start && _outputs.x && _outputs.y);
     _gamepad->setButton(10, _outputs.rightStickClick);
     _gamepad->setButton(11, _outputs.leftStickClick);
     _gamepad->setButton(12, _outputs.home);
