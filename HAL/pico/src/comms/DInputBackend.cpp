@@ -37,23 +37,23 @@ void DInputBackend::SendReport() {
     _gamepad->setButton(1, _outputs.b); // A
     _gamepad->setButton(2, _outputs.x); // Y
     _gamepad->setButton(3, _outputs.y); // X
-    _gamepad->setButton(4, _outputs.triggerRDigital); // ButtonR / Z
+    _gamepad->setButton(4, _outputs.buttonL); // ButtonR / Z
     _gamepad->setButton(5, _outputs.triggerRDigital); // TriggerRDigital / R
     _gamepad->setButton(6, _outputs.buttonR); // ButtonL / LB
     _gamepad->setButton(7, _outputs.triggerLDigital && _outputs.triggerRDigital); // TriggerLDigital
-    _gamepad->setButton(8, _outputs.select);
+    // _gamepad->setButton(8, _outputs.select);
     _gamepad->setButton(9, _outputs.rightStickClick); // Start
     _gamepad->setButton(10, _outputs.start); // RightStickClick
-    _gamepad->setButton(11, _outputs.leftStickClick);
-    _gamepad->setButton(12, _outputs.home);
+    // _gamepad->setButton(11, _outputs.leftStickClick);
+    // _gamepad->setButton(12, _outputs.home);
 
     // Analog outputs
     _gamepad->leftXAxis(_outputs.leftStickX);
     _gamepad->leftYAxis(255 - _outputs.leftStickY);
     _gamepad->rightXAxis(_outputs.rightStickX);
     _gamepad->rightYAxis(255 - _outputs.rightStickY);
-    _gamepad->triggerLAnalog(_outputs.triggerLAnalog + 1);
-    _gamepad->triggerRAnalog(_outputs.triggerRAnalog + 1);
+    // _gamepad->triggerLAnalog(_outputs.triggerLAnalog + 1);
+    // _gamepad->triggerRAnalog(_outputs.triggerRAnalog + 1);
 
     // D-pad Hat Switch
     _gamepad->hatSwitch(_outputs.dpadLeft, _outputs.dpadRight, _outputs.dpadDown, _outputs.dpadUp);
