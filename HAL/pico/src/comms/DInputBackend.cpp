@@ -33,17 +33,17 @@ void DInputBackend::SendReport() {
     UpdateOutputs();
 
     // Digital outputs
-    _gamepad->setButton(0, _outputs.b);
-    _gamepad->setButton(1, _outputs.a);
-    _gamepad->setButton(2, _outputs.y);
-    _gamepad->setButton(3, _outputs.x);
-    _gamepad->setButton(4, _outputs.buttonR);
-    _gamepad->setButton(5, _outputs.triggerRDigital);
-    _gamepad->setButton(6, _outputs.buttonL);
-    _gamepad->setButton(7, _outputs.triggerLDigital);
+    _gamepad->setButton(0, _outputs.a); // B
+    _gamepad->setButton(1, _outputs.b); // A
+    _gamepad->setButton(2, _outputs.x); // Y
+    _gamepad->setButton(3, _outputs.y); // X
+    _gamepad->setButton(4, _outputs.triggerRDigital); // ButtonR / Z
+    _gamepad->setButton(5, _outputs.triggerRDigital); // TriggerRDigital / R
+    _gamepad->setButton(6, _outputs.buttonR); // ButtonL / LB
+    _gamepad->setButton(7, _outputs.triggerLDigital && _outputs.triggerRDigital); // TriggerLDigital
     _gamepad->setButton(8, _outputs.select);
-    _gamepad->setButton(9, _outputs.start && _outputs.x && _outputs.y);
-    _gamepad->setButton(10, _outputs.rightStickClick);
+    _gamepad->setButton(9, _outputs.rightStickClick); // Start
+    _gamepad->setButton(10, _outputs.start); // RightStickClick
     _gamepad->setButton(11, _outputs.leftStickClick);
     _gamepad->setButton(12, _outputs.home);
 
