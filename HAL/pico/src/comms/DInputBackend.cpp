@@ -42,8 +42,8 @@ void DInputBackend::SendReport() {
     _gamepad->setButton(6, _outputs.buttonR); // ButtonL / LB
     _gamepad->setButton(7, _outputs.dpadUp); // TriggerLDigital
     // _gamepad->setButton(8, _outputs.select);
-    _gamepad->setButton(9, _outputs.rightStickClick); // Start
-    _gamepad->setButton(10, _outputs.start); // RightStickClick
+    _gamepad->setButton(9, _outputs.start); // Start
+    _gamepad->setButton(10, _outputs.rightStickClick); // RightStickClick
     // _gamepad->setButton(11, _outputs.leftStickClick);
     // _gamepad->setButton(12, _outputs.home);
 
@@ -52,8 +52,8 @@ void DInputBackend::SendReport() {
     _gamepad->leftYAxis(255 - _outputs.leftStickY);
     _gamepad->rightXAxis(_outputs.rightStickX);
     _gamepad->rightYAxis(255 - _outputs.rightStickY);
-    // _gamepad->triggerLAnalog(_outputs.triggerLAnalog + 1);
-    // _gamepad->triggerRAnalog(_outputs.triggerRAnalog + 1);
+    _gamepad->triggerLAnalog(_outputs.triggerLAnalog + 1);
+    _gamepad->triggerRAnalog(_outputs.triggerRAnalog + 1);
 
     // D-pad Hat Switch
     _gamepad->hatSwitch(_outputs.dpadLeft, _outputs.dpadRight, _outputs.dpadDown, _outputs.dpadUp);
