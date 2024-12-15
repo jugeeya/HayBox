@@ -33,7 +33,7 @@ void set_mode(CommunicationBackend *backend, KeyboardMode *mode) {
 
 void select_mode(CommunicationBackend *backend) {
     InputState &inputs = backend->GetInputs();
-    if (inputs.mod_x && !inputs.mod_y && inputs.start) {
+    if (inputs.start) {
         if (inputs.l) {
             set_mode(
                 backend,
