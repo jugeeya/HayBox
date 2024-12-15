@@ -40,7 +40,7 @@ void DInputBackend::SendReport() {
     _gamepad->setButton(4, _outputs.buttonL); // ButtonR / Z
     _gamepad->setButton(5, _outputs.triggerRDigital); // TriggerRDigital / R
     _gamepad->setButton(6, _outputs.buttonR); // ButtonL / LB
-    _gamepad->setButton(7, _outputs.triggerLDigital && _outputs.triggerRDigital); // TriggerLDigital
+    _gamepad->setButton(7, _outputs.dpadUp); // TriggerLDigital
     // _gamepad->setButton(8, _outputs.select);
     _gamepad->setButton(9, _outputs.rightStickClick); // Start
     _gamepad->setButton(10, _outputs.start); // RightStickClick
