@@ -38,7 +38,7 @@ void DInputBackend::SendReport() {
     _gamepad->setButton(2, _outputs.x); // Y
     _gamepad->setButton(3, _outputs.y); // X
     _gamepad->setButton(4, _outputs.buttonL); // ButtonR / Z
-    _gamepad->setButton(5, _outputs.triggerRDigital); // TriggerRDigital / R
+    _gamepad->setButton(5, _outputs.buttonR); // TriggerRDigital / R
     _gamepad->setButton(6, _outputs.buttonR); // ButtonL / LB
     _gamepad->setButton(7, _outputs.dpadUp); // TriggerLDigital
     // _gamepad->setButton(8, _outputs.select);
