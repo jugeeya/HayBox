@@ -10,7 +10,7 @@ const Config default_config = {
     .game_mode_configs_count = 7,
     .game_mode_configs = {
     GameModeConfig {
-            .mode_id = MODE_MELEE,
+            .mode_id = MODE_RIVALS_2,
             .socd_pairs_count = 4,
             .socd_pairs = {
                 SocdPair { .button_dir1 = BTN_LF3, .button_dir2 = BTN_LF1, .socd_type = SOCD_2IP_NO_REAC },
@@ -20,7 +20,7 @@ const Config default_config = {
             },
             .button_remapping_count = 0,
             .activation_binding_count = 3,
-            .activation_binding = { BTN_LT1, BTN_MB1, BTN_LF4 },
+            .activation_binding = { BTN_LT1, BTN_MB1, BTN_RF5 },
         },
        GameModeConfig {
             .mode_id = MODE_PROJECT_M,
@@ -76,7 +76,7 @@ const Config default_config = {
             .activation_binding = { BTN_LT1, BTN_MB1, BTN_RF1 },
         },
         GameModeConfig {
-            .mode_id = MODE_RIVALS_2,
+            .mode_id = MODE_MELEE,
             .socd_pairs_count = 4,
             .socd_pairs = {
                 SocdPair { .button_dir1 = BTN_LF3, .button_dir2 = BTN_LF1, .socd_type = SOCD_2IP_NO_REAC },
@@ -86,7 +86,7 @@ const Config default_config = {
             },
             .button_remapping_count = 0,
             .activation_binding_count = 3,
-            .activation_binding = { BTN_LT1, BTN_MB1, BTN_RF5 },
+            .activation_binding = { BTN_LT1, BTN_MB1, BTN_LF4 },
         },
         GameModeConfig {
             .mode_id = MODE_KEYBOARD,
