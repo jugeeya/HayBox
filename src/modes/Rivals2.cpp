@@ -74,7 +74,7 @@ void Rivals2::UpdateAnalogOutputs(const InputState &inputs, OutputState &outputs
     if (shield_button_pressed) {
         // (0.77~, 0.77~) originally just on diagonal to prevent spotdodge in shield
         outputs.leftStickX = 128 + (directions.x * 92);
-        outputs.leftStickY = 128 + (directions.y * 96);
+        outputs.leftStickY = 128 + (directions.y * 92);
     }
 
     // For MX Angled Tilts when input_persist is true
@@ -268,5 +268,6 @@ void Rivals2::UpdateAnalogOutputs(const InputState &inputs, OutputState &outputs
         outputs.leftStickY = inputs.nunchuk_y;
     }
 }
+
 
 
