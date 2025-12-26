@@ -50,55 +50,9 @@ void set_mode(CommunicationBackend *backend, KeyboardMode *mode) {
 
 void set_mode(CommunicationBackend *backend, GameModeConfig &mode_config, Config &config) {
     switch (mode_config.mode_id) {
-        case MODE_MELEE:
-            melee_mode.SetConfig(mode_config, config.melee_options);
-            set_mode(backend, &melee_mode);
-            break;
-        case MODE_PROJECT_M:
-            projectm_mode.SetConfig(mode_config, config.project_m_options);
-            set_mode(backend, &projectm_mode);
-            break;
-        case MODE_ULTIMATE:
-            ultimate_mode.SetConfig(mode_config);
-            set_mode(backend, &ultimate_mode);
-            break;
-        case MODE_FGC:
-            fgc_mode.SetConfig(mode_config);
-            set_mode(backend, &fgc_mode);
-            break;
-        case MODE_RIVALS_OF_AETHER:
-            rivals_mode.SetConfig(mode_config);
-            set_mode(backend, &rivals_mode);
-            break;
-        case MODE_RIVALS_2:
+        default:
             rivals2_mode.SetConfig(mode_config);
             set_mode(backend, &rivals2_mode);
-            break;
-        case MODE_KEYBOARD:
-            if (backend->BackendId() != COMMS_BACKEND_DINPUT ||
-                mode_config.keyboard_mode_config < 1 ||
-                mode_config.keyboard_mode_config > config.keyboard_modes_count) {
-                break;
-            }
-            keyboard_mode.SetConfig(
-                mode_config,
-                config.keyboard_modes[mode_config.keyboard_mode_config - 1]
-            );
-            set_mode(backend, &keyboard_mode);
-            break;
-        case MODE_CUSTOM:
-            if (mode_config.custom_mode_config < 1 ||
-                mode_config.custom_mode_config > config.custom_modes_count) {
-                break;
-            }
-            custom_mode.SetConfig(
-                mode_config,
-                config.custom_modes[mode_config.custom_mode_config - 1]
-            );
-            set_mode(backend, &custom_mode);
-            break;
-        case MODE_UNSPECIFIED:
-        default:
             break;
     }
 }
